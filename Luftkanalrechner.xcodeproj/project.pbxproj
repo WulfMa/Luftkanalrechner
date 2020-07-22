@@ -1,0 +1,599 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D500FE4824C8B07400559223 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D500FE4724C8B07400559223 /* AppDelegate.swift */; };
+		D500FE4A24C8B07400559223 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D500FE4924C8B07400559223 /* SceneDelegate.swift */; };
+		D500FE4C24C8B07400559223 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D500FE4B24C8B07400559223 /* ContentView.swift */; };
+		D500FE4E24C8B07400559223 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D500FE4D24C8B07400559223 /* Assets.xcassets */; };
+		D500FE5124C8B07400559223 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D500FE5024C8B07400559223 /* Preview Assets.xcassets */; };
+		D500FE5424C8B07400559223 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D500FE5224C8B07400559223 /* LaunchScreen.storyboard */; };
+		D500FE5F24C8B07400559223 /* LuftkanalrechnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D500FE5E24C8B07400559223 /* LuftkanalrechnerTests.swift */; };
+		D500FE6A24C8B07400559223 /* LuftkanalrechnerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D500FE6924C8B07400559223 /* LuftkanalrechnerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D500FE5B24C8B07400559223 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D500FE3C24C8B07400559223 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D500FE4324C8B07400559223;
+			remoteInfo = Luftkanalrechner;
+		};
+		D500FE6624C8B07400559223 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D500FE3C24C8B07400559223 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D500FE4324C8B07400559223;
+			remoteInfo = Luftkanalrechner;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D500FE4424C8B07400559223 /* Luftkanalrechner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Luftkanalrechner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D500FE4724C8B07400559223 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D500FE4924C8B07400559223 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D500FE4B24C8B07400559223 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D500FE4D24C8B07400559223 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D500FE5024C8B07400559223 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D500FE5324C8B07400559223 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D500FE5524C8B07400559223 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D500FE5A24C8B07400559223 /* LuftkanalrechnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LuftkanalrechnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D500FE5E24C8B07400559223 /* LuftkanalrechnerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuftkanalrechnerTests.swift; sourceTree = "<group>"; };
+		D500FE6024C8B07400559223 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D500FE6524C8B07400559223 /* LuftkanalrechnerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LuftkanalrechnerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D500FE6924C8B07400559223 /* LuftkanalrechnerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuftkanalrechnerUITests.swift; sourceTree = "<group>"; };
+		D500FE6B24C8B07400559223 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D500FE4124C8B07400559223 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D500FE5724C8B07400559223 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D500FE6224C8B07400559223 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D500FE3B24C8B07400559223 = {
+			isa = PBXGroup;
+			children = (
+				D500FE4624C8B07400559223 /* Luftkanalrechner */,
+				D500FE5D24C8B07400559223 /* LuftkanalrechnerTests */,
+				D500FE6824C8B07400559223 /* LuftkanalrechnerUITests */,
+				D500FE4524C8B07400559223 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D500FE4524C8B07400559223 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D500FE4424C8B07400559223 /* Luftkanalrechner.app */,
+				D500FE5A24C8B07400559223 /* LuftkanalrechnerTests.xctest */,
+				D500FE6524C8B07400559223 /* LuftkanalrechnerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D500FE4624C8B07400559223 /* Luftkanalrechner */ = {
+			isa = PBXGroup;
+			children = (
+				D500FE4724C8B07400559223 /* AppDelegate.swift */,
+				D500FE4924C8B07400559223 /* SceneDelegate.swift */,
+				D500FE4B24C8B07400559223 /* ContentView.swift */,
+				D500FE4D24C8B07400559223 /* Assets.xcassets */,
+				D500FE5224C8B07400559223 /* LaunchScreen.storyboard */,
+				D500FE5524C8B07400559223 /* Info.plist */,
+				D500FE4F24C8B07400559223 /* Preview Content */,
+			);
+			path = Luftkanalrechner;
+			sourceTree = "<group>";
+		};
+		D500FE4F24C8B07400559223 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D500FE5024C8B07400559223 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D500FE5D24C8B07400559223 /* LuftkanalrechnerTests */ = {
+			isa = PBXGroup;
+			children = (
+				D500FE5E24C8B07400559223 /* LuftkanalrechnerTests.swift */,
+				D500FE6024C8B07400559223 /* Info.plist */,
+			);
+			path = LuftkanalrechnerTests;
+			sourceTree = "<group>";
+		};
+		D500FE6824C8B07400559223 /* LuftkanalrechnerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D500FE6924C8B07400559223 /* LuftkanalrechnerUITests.swift */,
+				D500FE6B24C8B07400559223 /* Info.plist */,
+			);
+			path = LuftkanalrechnerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D500FE4324C8B07400559223 /* Luftkanalrechner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D500FE6E24C8B07400559223 /* Build configuration list for PBXNativeTarget "Luftkanalrechner" */;
+			buildPhases = (
+				D500FE4024C8B07400559223 /* Sources */,
+				D500FE4124C8B07400559223 /* Frameworks */,
+				D500FE4224C8B07400559223 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Luftkanalrechner;
+			productName = Luftkanalrechner;
+			productReference = D500FE4424C8B07400559223 /* Luftkanalrechner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D500FE5924C8B07400559223 /* LuftkanalrechnerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D500FE7124C8B07400559223 /* Build configuration list for PBXNativeTarget "LuftkanalrechnerTests" */;
+			buildPhases = (
+				D500FE5624C8B07400559223 /* Sources */,
+				D500FE5724C8B07400559223 /* Frameworks */,
+				D500FE5824C8B07400559223 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D500FE5C24C8B07400559223 /* PBXTargetDependency */,
+			);
+			name = LuftkanalrechnerTests;
+			productName = LuftkanalrechnerTests;
+			productReference = D500FE5A24C8B07400559223 /* LuftkanalrechnerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D500FE6424C8B07400559223 /* LuftkanalrechnerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D500FE7424C8B07400559223 /* Build configuration list for PBXNativeTarget "LuftkanalrechnerUITests" */;
+			buildPhases = (
+				D500FE6124C8B07400559223 /* Sources */,
+				D500FE6224C8B07400559223 /* Frameworks */,
+				D500FE6324C8B07400559223 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D500FE6724C8B07400559223 /* PBXTargetDependency */,
+			);
+			name = LuftkanalrechnerUITests;
+			productName = LuftkanalrechnerUITests;
+			productReference = D500FE6524C8B07400559223 /* LuftkanalrechnerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D500FE3C24C8B07400559223 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "Martin Wulf";
+				TargetAttributes = {
+					D500FE4324C8B07400559223 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					D500FE5924C8B07400559223 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = D500FE4324C8B07400559223;
+					};
+					D500FE6424C8B07400559223 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = D500FE4324C8B07400559223;
+					};
+				};
+			};
+			buildConfigurationList = D500FE3F24C8B07400559223 /* Build configuration list for PBXProject "Luftkanalrechner" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D500FE3B24C8B07400559223;
+			productRefGroup = D500FE4524C8B07400559223 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D500FE4324C8B07400559223 /* Luftkanalrechner */,
+				D500FE5924C8B07400559223 /* LuftkanalrechnerTests */,
+				D500FE6424C8B07400559223 /* LuftkanalrechnerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D500FE4224C8B07400559223 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D500FE5424C8B07400559223 /* LaunchScreen.storyboard in Resources */,
+				D500FE5124C8B07400559223 /* Preview Assets.xcassets in Resources */,
+				D500FE4E24C8B07400559223 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D500FE5824C8B07400559223 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D500FE6324C8B07400559223 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D500FE4024C8B07400559223 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D500FE4824C8B07400559223 /* AppDelegate.swift in Sources */,
+				D500FE4A24C8B07400559223 /* SceneDelegate.swift in Sources */,
+				D500FE4C24C8B07400559223 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D500FE5624C8B07400559223 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D500FE5F24C8B07400559223 /* LuftkanalrechnerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D500FE6124C8B07400559223 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D500FE6A24C8B07400559223 /* LuftkanalrechnerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D500FE5C24C8B07400559223 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D500FE4324C8B07400559223 /* Luftkanalrechner */;
+			targetProxy = D500FE5B24C8B07400559223 /* PBXContainerItemProxy */;
+		};
+		D500FE6724C8B07400559223 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D500FE4324C8B07400559223 /* Luftkanalrechner */;
+			targetProxy = D500FE6624C8B07400559223 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D500FE5224C8B07400559223 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D500FE5324C8B07400559223 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D500FE6C24C8B07400559223 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D500FE6D24C8B07400559223 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D500FE6F24C8B07400559223 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Luftkanalrechner/Preview Content\"";
+				DEVELOPMENT_TEAM = VKZF97P5NX;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Luftkanalrechner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.martinwulf.Luftkanalrechner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D500FE7024C8B07400559223 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Luftkanalrechner/Preview Content\"";
+				DEVELOPMENT_TEAM = VKZF97P5NX;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Luftkanalrechner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.martinwulf.Luftkanalrechner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D500FE7224C8B07400559223 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VKZF97P5NX;
+				INFOPLIST_FILE = LuftkanalrechnerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.martinwulf.LuftkanalrechnerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Luftkanalrechner.app/Luftkanalrechner";
+			};
+			name = Debug;
+		};
+		D500FE7324C8B07400559223 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VKZF97P5NX;
+				INFOPLIST_FILE = LuftkanalrechnerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.martinwulf.LuftkanalrechnerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Luftkanalrechner.app/Luftkanalrechner";
+			};
+			name = Release;
+		};
+		D500FE7524C8B07400559223 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VKZF97P5NX;
+				INFOPLIST_FILE = LuftkanalrechnerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.martinwulf.LuftkanalrechnerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Luftkanalrechner;
+			};
+			name = Debug;
+		};
+		D500FE7624C8B07400559223 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VKZF97P5NX;
+				INFOPLIST_FILE = LuftkanalrechnerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.martinwulf.LuftkanalrechnerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Luftkanalrechner;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D500FE3F24C8B07400559223 /* Build configuration list for PBXProject "Luftkanalrechner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D500FE6C24C8B07400559223 /* Debug */,
+				D500FE6D24C8B07400559223 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D500FE6E24C8B07400559223 /* Build configuration list for PBXNativeTarget "Luftkanalrechner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D500FE6F24C8B07400559223 /* Debug */,
+				D500FE7024C8B07400559223 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D500FE7124C8B07400559223 /* Build configuration list for PBXNativeTarget "LuftkanalrechnerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D500FE7224C8B07400559223 /* Debug */,
+				D500FE7324C8B07400559223 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D500FE7424C8B07400559223 /* Build configuration list for PBXNativeTarget "LuftkanalrechnerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D500FE7524C8B07400559223 /* Debug */,
+				D500FE7624C8B07400559223 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D500FE3C24C8B07400559223 /* Project object */;
+}
