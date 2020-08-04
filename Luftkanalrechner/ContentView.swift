@@ -70,7 +70,8 @@ struct ContentView: View {
                 
                 VStack (alignment: .center){
                     
-                    TextField("", text: $VolumenstromEingabe)
+                    TextField("", text: $VolumenstromEingabe,
+                              onCommit : { self.BerechungVundG()} )
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .frame(width: 100, height: 50)
                         .keyboardType(.numberPad)
@@ -86,7 +87,7 @@ struct ContentView: View {
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .frame(width: 100, height: 50)
                         .keyboardType(.numberPad)
-                    TextField("1000", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                    TextField("1000", text: $KanalDErgebnis)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .frame(width: 100, height: 50)
                         .keyboardType(.numberPad)
