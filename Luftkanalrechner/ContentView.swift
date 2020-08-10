@@ -30,7 +30,7 @@ struct ContentView: View {
     @State private var KanalAErgebnis : String = ""
     @State private var KanalBEingabe : String = ""
     @State private var KanalDErgebnis : String = ""
-    
+    @State private var KanalDEingabe : String = ""
     
     var body: some View {
         
@@ -71,22 +71,22 @@ struct ContentView: View {
                 VStack (alignment: .center){
                     
                     TextField("", text: $VolumenstromEingabe,
-                              onCommit : { self.BerechungVundG()} )
+                              onCommit : { self.BerechungVG()} )
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .frame(width: 100, height: 50)
                     //.keyboardType(.numberPad) currently not working
                     TextField("", text: $GeschwindigkeitEingabe,
-                              onCommit: {self.BerechungVundG()})
+                              onCommit: {self.BerechungVG()})
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .frame(width: 100, height: 50)
                     //.keyboardType(.numberPad) currently not working
                     TextField("", text: $KanalAEingabe,
-                              onCommit: { self.BerechungVundA()})
+                              onCommit: { self.BerechungVGA()})
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .frame(width: 100, height: 50)
                     //.keyboardType(.numberPad) currently not working
                     TextField("1000", text: $KanalBEingabe,
-                    onCommit: { self.BerechungVundA()})
+                    onCommit: { self.BerechungVAB()})
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .frame(width: 100, height: 50)
                     //.keyboardType(.numberPad) currently not working
@@ -131,13 +131,12 @@ struct ContentView: View {
             Image("KanalWhite")
             .resizable()
                 .frame(width: 150, height: 150)
-            Text("Luftkanarechner v0.2")
+            Text("Luftkanarechner v1.0.2")
     }
 
     
 }
-func BerechungVundG(){
-    self.hideKeyboard()
+func BerechungVGA(){
     var calculation : Double {
         guard let V = Double(VolumenstromEingabe), let g = Double(GeschwindigkeitEingabe), let A = Double(KanalAEingabe) else { return 0 }
         let product = V / g / A * 10000 / 36
@@ -156,8 +155,29 @@ func BerechungVundG(){
     KanalDErgebnis = String(formatted2)
     
 }
-    func BerechungVundA(){
-        self.hideKeyboard()
+    func BerechungVG(){
+        var calculation : Double {
+            guard let V = Double(VolumenstromEingabe), let g = Double(GeschwindigkeitEingabe) else { return 0 }
+            let product = V / g / 3600
+            let product2 = sqrt(product) * 1000
+            return product2
+        }
+        let formatted = String(format: "%.2f", calculation)
+        KanalBEingabe = String(formatted)
+        KanalAEingabe = String(formatted)
+
+       
+        var calculation2 : Double {
+            guard let V = Double(VolumenstromEingabe), let g = Double(GeschwindigkeitEingabe) else { return 0 }
+            let product2 = (V / g / 3600) / 3.14159265
+            let product3 = sqrt(product2) * 2000
+            return product3
+        }
+        let formatted2 = String(format: "%.2f", calculation2)
+        KanalDErgebnis = String(formatted2)
+        
+    }
+    func BerechungVAB(){
         var calculation : Double {
             guard let V = Double(VolumenstromEingabe), let B = Double(KanalBEingabe), let A = Double(KanalAEingabe) else { return 0 }
             let product = V / B / A * 10000 / 36
