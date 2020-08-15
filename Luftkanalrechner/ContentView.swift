@@ -31,9 +31,10 @@ struct ContentView: View {
     @State private var KanalBEingabe : String = ""
     @State private var KanalDErgebnis : String = ""
     @State private var KanalDEingabe : String = ""
+    @State private var showingInfoSheet = false
+
     
     var body: some View {
-        
         VStack{
             
             HStack{
@@ -70,27 +71,27 @@ struct ContentView: View {
                 
                 VStack (alignment: .center){
                     
-                    TextField("", text: $VolumenstromEingabe,
+                    TextField("0", text: $VolumenstromEingabe,
                               onCommit : { self.BerechungVG()} )
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .frame(width: 100, height: 50)
                     //.keyboardType(.numberPad) currently not working
-                    TextField("", text: $GeschwindigkeitEingabe,
+                    TextField("0", text: $GeschwindigkeitEingabe,
                               onCommit: {self.BerechungVG()})
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .frame(width: 100, height: 50)
                     //.keyboardType(.numberPad) currently not working
-                    TextField("", text: $KanalAEingabe,
+                    TextField("0", text: $KanalAEingabe,
                               onCommit: { self.BerechungVGA()})
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .frame(width: 100, height: 50)
                     //.keyboardType(.numberPad) currently not working
-                    TextField("1000", text: $KanalBEingabe,
-                    onCommit: { self.BerechungVAB()})
+                    TextField("0", text: $KanalBEingabe,
+                              onCommit: { self.BerechungVAB()})
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .frame(width: 100, height: 50)
                     //.keyboardType(.numberPad) currently not working
-                    TextField("1000", text: $KanalDErgebnis)
+                    TextField("0", text: $KanalDErgebnis)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .frame(width: 100, height: 50)
                     //.keyboardType(.numberPad) currently not working
@@ -123,38 +124,49 @@ struct ContentView: View {
                 }
                 
             }
-
-      Spacer()
-        .frame(height: 100
-            )
             
-            Image("KanalWhite")
-            .resizable()
-                .frame(width: 150, height: 150)
-            Text("Luftkanarechner v1.0.2")
+            Spacer()
+                .frame(height: 100)
+            
+            VStack{
+                Spacer()
+                    .frame(height: 20)
+                
+                HStack (spacing: 5){
+                    
+                   
+                    Button(action: {self.showingInfoSheet = true}) {
+                        Image(systemName: "info.circle")
+                        Text("Info")
+                    }
+                    .actionSheet(isPresented: $showingInfoSheet) {
+                        ActionSheet(title: Text("What do you want to do?"))
+                    }
+                }
+                Text("Luftkanarechner v1.0.2")
+            }
+            
+        }
     }
-
-    
-}
-func BerechungVGA(){
-    var calculation : Double {
-        guard let V = Double(VolumenstromEingabe), let g = Double(GeschwindigkeitEingabe), let A = Double(KanalAEingabe) else { return 0 }
-        let product = V / g / A * 10000 / 36
-        return product
+    func BerechungVGA(){
+        var calculation : Double {
+            guard let V = Double(VolumenstromEingabe), let g = Double(GeschwindigkeitEingabe), let A = Double(KanalAEingabe) else { return 0 }
+            let product = V / g / A * 10000 / 36
+            return product
+        }
+        let formatted = String(format: "%.2f", calculation)
+        KanalBEingabe = String(formatted)
+        
+        var calculation2 : Double {
+            guard let V = Double(VolumenstromEingabe), let g = Double(GeschwindigkeitEingabe) else { return 0 }
+            let product2 = (V / g / 3600) / 3.14159265
+            let product3 = sqrt(product2) * 2000
+            return product3
+        }
+        let formatted2 = String(format: "%.2f", calculation2)
+        KanalDErgebnis = String(formatted2)
+        
     }
-    let formatted = String(format: "%.2f", calculation)
-    KanalBEingabe = String(formatted)
-   
-    var calculation2 : Double {
-        guard let V = Double(VolumenstromEingabe), let g = Double(GeschwindigkeitEingabe) else { return 0 }
-        let product2 = (V / g / 3600) / 3.14159265
-        let product3 = sqrt(product2) * 2000
-        return product3
-    }
-    let formatted2 = String(format: "%.2f", calculation2)
-    KanalDErgebnis = String(formatted2)
-    
-}
     func BerechungVG(){
         var calculation : Double {
             guard let V = Double(VolumenstromEingabe), let g = Double(GeschwindigkeitEingabe) else { return 0 }
@@ -165,8 +177,8 @@ func BerechungVGA(){
         let formatted = String(format: "%.2f", calculation)
         KanalBEingabe = String(formatted)
         KanalAEingabe = String(formatted)
-
-       
+        
+        
         var calculation2 : Double {
             guard let V = Double(VolumenstromEingabe), let g = Double(GeschwindigkeitEingabe) else { return 0 }
             let product2 = (V / g / 3600) / 3.14159265
