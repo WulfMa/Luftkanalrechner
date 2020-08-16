@@ -32,9 +32,10 @@ struct ContentView: View {
     @State private var KanalDErgebnis : String = ""
     @State private var KanalDEingabe : String = ""
     @State private var showingInfoSheet = false
-
+    
     
     var body: some View {
+
         VStack{
             
             HStack{
@@ -120,11 +121,8 @@ struct ContentView: View {
                         .font(.body)
                         .fontWeight(.bold)
                         .frame(height: 50)
-                    
                 }
-                
             }
-            
             Spacer()
                 .frame(height: 100)
             
@@ -134,18 +132,17 @@ struct ContentView: View {
                 
                 HStack (spacing: 5){
                     
-                   
+                    
                     Button(action: {self.showingInfoSheet = true}) {
                         Image(systemName: "info.circle")
                         Text("Info")
                     }
-                    .actionSheet(isPresented: $showingInfoSheet) {
-                        ActionSheet(title: Text("What do you want to do?"))
-                    }
+                    .sheet(isPresented: $showingInfoSheet, content: {
+                        InfoScreen()
+                    })
                 }
                 Text("Luftkanarechner v1.0.2")
             }
-            
         }
     }
     func BerechungVGA(){
@@ -199,7 +196,6 @@ struct ContentView: View {
         GeschwindigkeitEingabe = String(formatted)
     }
 }
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
