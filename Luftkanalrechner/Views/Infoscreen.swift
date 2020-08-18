@@ -17,12 +17,14 @@ struct InfoScreen: View {
             
             HStack (alignment: .center){
                 
-                VStack (alignment: .leading){
+                VStack (alignment: .center, spacing: 5){
                     
                     Text("Wilkommen")
                         .font(.title)
+                        .padding(.top)
                     Text("beim Kanalrechner")
                         .font(.subheadline)
+                        .padding(.bottom)
                 }
                 
                 
@@ -32,10 +34,12 @@ struct InfoScreen: View {
                 Image("Blank")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
+                    .frame(height: 350)
             }
             Button(action: {self.showingInfoSheet2 = true}) {
                 Text("Weiter")
                 Image(systemName: "wind")
+                .padding()
             }
             .sheet(isPresented: $showingInfoSheet2, content: {
                 InfoScreen2()
@@ -63,6 +67,7 @@ struct InfoScreen2: View {
                         .font(.subheadline)
                         .padding(.bottom)
                         .padding(.leading)
+                        .padding(.trailing)
                 }
                 
             }
@@ -71,6 +76,7 @@ struct InfoScreen2: View {
                 Image("VundG")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
+                    .frame(height: 350)
             }
             Button(action: {self.showingInfoSheet3 = true}) {
                 Text("Weiter")
@@ -85,7 +91,7 @@ struct InfoScreen2: View {
 }
 
 struct InfoScreen3: View {
-    @State private var showingInfoSheet3 = false
+    @State private var showingInfoSheet4 = false
     
     var body: some View {
         
@@ -103,29 +109,72 @@ struct InfoScreen3: View {
                         .font(.subheadline)
                         .padding(.bottom)
                         .padding(.leading)
+                        .padding(.trailing)
                 }
                 
                 
             }
             VStack{
                 
-                Image("Blank")
+                Image("KanalA")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
+                    .frame(height: 350)
             }
-            Button(action: {self.showingInfoSheet3 = true}) {
+            Button(action: {self.showingInfoSheet4 = true}) {
                 Text("Weiter")
                 Image(systemName: "wind")
             }
-            .sheet(isPresented: $showingInfoSheet3, content: {
-                InfoScreen3()
+            .sheet(isPresented: $showingInfoSheet4, content: {
+                InfoScreen4()
             })
                 .padding()
         }
     }
 }
+
+struct InfoScreen4: View {
+    @State private var showingInfoSheet4 = false
+    
+    var body: some View {
+        NavigationView{
+        VStack{
+            
+            HStack (alignment: .center){
+                
+                VStack (alignment: .leading, spacing: 5){
+                    
+                    Text("Einführung")
+                        .font(.title)
+                        .padding(.top)
+                        .padding(.leading)
+                    Text("Eine Eingabe im Feld Kanal B verändert die Geschwindigkeit bei gleich bleibendem Kanal A und Volumenstrom ")
+                        .font(.subheadline)
+                        .padding(.bottom)
+                        .padding(.leading)
+                        .padding(.trailing)
+                }
+
+                
+            }
+            VStack{
+                
+                Image("KanalAundB")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(height: 350)
+            }
+            NavigationLink(destination: ContentView()) {
+                Text("Fertig")
+                .padding()
+            }
+
+        }
+        }
+    }
+}
 struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
-        InfoScreen3()
+        InfoScreen4()
     }
 }
