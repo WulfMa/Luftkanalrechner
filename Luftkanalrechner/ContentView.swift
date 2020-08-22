@@ -37,8 +37,8 @@ struct ContentView: View {
     var body: some View {
 
         VStack{
-            
-            HStack{
+            Spacer()
+            HStack (alignment: .top){
                 
                 VStack (alignment: .trailing, spacing:8){
                     
@@ -92,7 +92,8 @@ struct ContentView: View {
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .frame(width: 100, height: 50)
                     //.keyboardType(.numberPad) currently not working
-                    TextField("0", text: $KanalDErgebnis)
+                    TextField("0", text: $KanalDErgebnis,
+                              onCommit: { self.BerechungDg()})
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .frame(width: 100, height: 50)
                     //.keyboardType(.numberPad) currently not working
@@ -124,24 +125,31 @@ struct ContentView: View {
                 }
             }
             Spacer()
-                .frame(height: 100)
+
             
-            VStack{
-                Spacer()
-                    .frame(height: 20)
+            HStack{
+
+                VStack{
+                    Spacer()
+                    Image(systemName: "wind")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(height: 80)
+                        .padding()
                 
-                HStack (spacing: 5){
-                    
-                    
-                    Button(action: {self.showingInfoSheet = true}) {
-                        Image(systemName: "info.circle")
-                        Text("Info")
+                    Button(action: {
+                       self.showingInfoSheet.toggle()
+                    }) {
+                       Text("Infomationen")
+                        
                     }
                     .sheet(isPresented: $showingInfoSheet, content: {
-                        InfoScreen()
+                        ScrollView1()
                     })
-                }
-                Text("Luftkanarechner v1.0.2")
+
+                Text("Luftkanalrechner v1.0.2")
+                    .padding()
+            }
             }
         }
     }
@@ -149,9 +157,10 @@ struct ContentView: View {
         var calculation : Double {
             guard let V = Double(VolumenstromEingabe), let g = Double(GeschwindigkeitEingabe), let A = Double(KanalAEingabe) else { return 0 }
             let product = V / g / A * 10000 / 36
-            return product
+            let rounded = Double(round(product/100)*100)
+            return rounded
         }
-        let formatted = String(format: "%.2f", calculation)
+        let formatted = String(format: "%.0f", calculation)
         KanalBEingabe = String(formatted)
         
         var calculation2 : Double {
@@ -159,8 +168,9 @@ struct ContentView: View {
             let product2 = (V / g / 3600) / 3.14159265
             let product3 = sqrt(product2) * 2000
             return product3
+            
         }
-        let formatted2 = String(format: "%.2f", calculation2)
+        let formatted2 = String(format: "%.0f", calculation2)
         KanalDErgebnis = String(formatted2)
         
     }
@@ -171,7 +181,7 @@ struct ContentView: View {
             let product2 = sqrt(product) * 1000
             return product2
         }
-        let formatted = String(format: "%.2f", calculation)
+        let formatted = String(format: "%.0f", calculation)
         KanalBEingabe = String(formatted)
         KanalAEingabe = String(formatted)
         
@@ -182,7 +192,7 @@ struct ContentView: View {
             let product3 = sqrt(product2) * 2000
             return product3
         }
-        let formatted2 = String(format: "%.2f", calculation2)
+        let formatted2 = String(format: "%.0f", calculation2)
         KanalDErgebnis = String(formatted2)
         
     }
@@ -191,6 +201,17 @@ struct ContentView: View {
             guard let V = Double(VolumenstromEingabe), let B = Double(KanalBEingabe), let A = Double(KanalAEingabe) else { return 0 }
             let product = V / B / A * 10000 / 36
             return product
+        }
+        let formatted = String(format: "%.2f", calculation)
+        GeschwindigkeitEingabe = String(formatted)
+    }
+    func BerechungDg(){
+        var calculation : Double {
+            guard let D = Double(KanalDErgebnis), let V = Double(VolumenstromEingabe) else { return 0 }
+            let product3 = D / 1000
+            let product2 = (product3 / 2) * (product3 / 2)
+            let product1 = V / 3600 / 3.14159265 / product2
+            return product1
         }
         let formatted = String(format: "%.2f", calculation)
         GeschwindigkeitEingabe = String(formatted)

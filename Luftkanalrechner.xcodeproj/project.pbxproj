@@ -15,7 +15,7 @@
 		D500FE5424C8B07400559223 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D500FE5224C8B07400559223 /* LaunchScreen.storyboard */; };
 		D500FE5F24C8B07400559223 /* LuftkanalrechnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D500FE5E24C8B07400559223 /* LuftkanalrechnerTests.swift */; };
 		D500FE6A24C8B07400559223 /* LuftkanalrechnerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D500FE6924C8B07400559223 /* LuftkanalrechnerUITests.swift */; };
-		D5FA23B824E8385300716583 /* Infoscreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FA23B724E8385300716583 /* Infoscreen.swift */; };
+		D51C19A924F0810600F3A9D7 /* ScrollView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51C19A824F0810600F3A9D7 /* ScrollView1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +50,7 @@
 		D500FE6524C8B07400559223 /* LuftkanalrechnerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LuftkanalrechnerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D500FE6924C8B07400559223 /* LuftkanalrechnerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuftkanalrechnerUITests.swift; sourceTree = "<group>"; };
 		D500FE6B24C8B07400559223 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D5FA23B724E8385300716583 /* Infoscreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Infoscreen.swift; path = Views/Infoscreen.swift; sourceTree = "<group>"; };
+		D51C19A824F0810600F3A9D7 /* ScrollView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollView1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +104,7 @@
 				D500FE4724C8B07400559223 /* AppDelegate.swift */,
 				D500FE4924C8B07400559223 /* SceneDelegate.swift */,
 				D500FE4B24C8B07400559223 /* ContentView.swift */,
-				D5FA23B724E8385300716583 /* Infoscreen.swift */,
+				D51C19A824F0810600F3A9D7 /* ScrollView1.swift */,
 				D500FE4D24C8B07400559223 /* Assets.xcassets */,
 				D500FE5224C8B07400559223 /* LaunchScreen.storyboard */,
 				D500FE5524C8B07400559223 /* Info.plist */,
@@ -272,7 +272,7 @@
 			files = (
 				D500FE4824C8B07400559223 /* AppDelegate.swift in Sources */,
 				D500FE4A24C8B07400559223 /* SceneDelegate.swift in Sources */,
-				D5FA23B824E8385300716583 /* Infoscreen.swift in Sources */,
+				D51C19A924F0810600F3A9D7 /* ScrollView1.swift in Sources */,
 				D500FE4C24C8B07400559223 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
