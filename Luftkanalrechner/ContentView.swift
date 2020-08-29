@@ -153,12 +153,14 @@ struct ContentView: View {
             }
         }
     }
+    
+
+    
     func BerechungVGA(){
         var calculation : Double {
             guard let V = Double(VolumenstromEingabe), let g = Double(GeschwindigkeitEingabe), let A = Double(KanalAEingabe) else { return 0 }
             let product = V / g / A * 10000 / 36
-            let rounded = Double(round(product/100)*100)
-            return rounded
+            return product
         }
         let formatted = String(format: "%.0f", calculation)
         KanalBEingabe = String(formatted)
@@ -185,17 +187,17 @@ struct ContentView: View {
         KanalBEingabe = String(formatted)
         KanalAEingabe = String(formatted)
         
-        
         var calculation2 : Double {
             guard let V = Double(VolumenstromEingabe), let g = Double(GeschwindigkeitEingabe) else { return 0 }
             let product2 = (V / g / 3600) / 3.14159265
             let product3 = sqrt(product2) * 2000
             return product3
         }
+
         let formatted2 = String(format: "%.0f", calculation2)
         KanalDErgebnis = String(formatted2)
-        
     }
+    
     func BerechungVAB(){
         var calculation : Double {
             guard let V = Double(VolumenstromEingabe), let B = Double(KanalBEingabe), let A = Double(KanalAEingabe) else { return 0 }
