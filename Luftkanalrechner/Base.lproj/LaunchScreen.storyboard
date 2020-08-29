@@ -15,12 +15,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="wind" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="zRQ-mp-esX">
-                                <rect key="frame" x="87" y="384" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="zRQ-mp-esX">
+                                <rect key="frame" x="86.214105793453882" y="385.54282115866795" width="240" height="128"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="zRQ-mp-esX" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ZHl-Ar-s1z"/>
+                            <constraint firstItem="zRQ-mp-esX" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="fqw-NX-yjC"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -30,6 +33,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="wind" catalog="system" width="128" height="103"/>
+        <image name="Logo" width="9201" height="8040"/>
     </resources>
 </document>

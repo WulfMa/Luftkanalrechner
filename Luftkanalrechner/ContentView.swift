@@ -161,7 +161,7 @@ struct ContentView: View {
                 
                 VStack{
                     Spacer()
-                    Image(systemName: "wind")
+                    Image("Logo")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(height: 80)
@@ -177,7 +177,7 @@ struct ContentView: View {
                         ScrollView1()
                     })
                     
-                    Text("Luftkanalrechner v1.0.2")
+                    Text("Luftkanalrechner v1.0, Build 5")
                         .padding()
                 }
             }
