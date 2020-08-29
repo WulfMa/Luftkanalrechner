@@ -161,7 +161,7 @@ struct ContentView: View {
                 
                 VStack{
                     Spacer()
-                    Image("Logo")
+                    Image("Logo Martin neu-60")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(height: 80)
@@ -170,7 +170,7 @@ struct ContentView: View {
                     Button(action: {
                         self.showingInfoSheet.toggle()
                     }) {
-                        Text("Infomationen")
+                        Text("Informationen")
                         
                     }
                     .sheet(isPresented: $showingInfoSheet, content: {
