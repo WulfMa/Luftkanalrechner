@@ -9,16 +9,6 @@
 // some Superscript ¹ ² ³ ⁴ ⁵ ⁶ ⁷ ⁸ ⁹
 
 import SwiftUI
-import UIKit
-
-#if canImport(UIKit)
-extension View {
-    func hideKeyboard() {
-        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-    }
-}
-#endif
-//this is making the keybord go away when i call the function hidekeyboard()
 
 struct ContentView: View {
     
@@ -32,10 +22,36 @@ struct ContentView: View {
     @State private var KanalDErgebnis : String = ""
     @State private var KanalDEingabe : String = ""
     @State private var showingInfoSheet = false
+    @State private var showAlert = false
+    
+    
+    
+    public struct ClearButton: ViewModifier {
+        @Binding var text: String
+        
+        public init(text: Binding<String>) {
+            self._text = text
+        }
+        
+        public func body(content: Content) -> some View {
+            ZStack(alignment: .trailing){
+                content
+                // onTapGesture is better than a Button here when adding to a form
+                Image(systemName: "multiply.circle.fill")
+                    .foregroundColor(.secondary)
+                    .opacity(text == "" ? 0 : 0.5)
+                    .onTapGesture { self.text = "" }
+                    .padding(.trailing, 5)
+            
+                
+                
+            }
+        }
+    }
     
     
     var body: some View {
-
+        
         VStack{
             Spacer()
             HStack (alignment: .top){
@@ -73,30 +89,44 @@ struct ContentView: View {
                 VStack (alignment: .center){
                     
                     TextField("0", text: $VolumenstromEingabe,
-                              onCommit : { self.BerechungVG()} )
+                              onCommit : { self.BerechungVG1(); self.BerechungVG2()} )
                         .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .modifier(ClearButton(text: $VolumenstromEingabe))
                         .frame(width: 100, height: 50)
-                    //.keyboardType(.numberPad) currently not working
+                        .keyboardType(.numbersAndPunctuation)
+                    
                     TextField("0", text: $GeschwindigkeitEingabe,
-                              onCommit: {self.BerechungVG()})
+                              onCommit: {self.BerechungVG1(); self.BerechungVG2()})
                         .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .modifier(ClearButton(text: $GeschwindigkeitEingabe))
                         .frame(width: 100, height: 50)
-                    //.keyboardType(.numberPad) currently not working
+                        .keyboardType(.numbersAndPunctuation)
+                    
+                    
                     TextField("0", text: $KanalAEingabe,
                               onCommit: { self.BerechungVGA()})
                         .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .modifier(ClearButton(text: $KanalAEingabe))
                         .frame(width: 100, height: 50)
-                    //.keyboardType(.numberPad) currently not working
+                        .keyboardType(.numbersAndPunctuation)
+                    
+                    
                     TextField("0", text: $KanalBEingabe,
-                              onCommit: { self.BerechungVAB()})
+                              onCommit: { self.BerechungVAB(); self.BerechungVGD()
+                    })
                         .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .modifier(ClearButton(text: $KanalBEingabe))
                         .frame(width: 100, height: 50)
-                    //.keyboardType(.numberPad) currently not working
+                        .keyboardType(.numbersAndPunctuation)
+                    
+                    
                     TextField("0", text: $KanalDErgebnis,
-                              onCommit: { self.BerechungDg()})
+                              onCommit: { self.BerechungDg(); self.BerechungVG1()})
                         .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .modifier(ClearButton(text: $KanalDErgebnis))
                         .frame(width: 100, height: 50)
-                    //.keyboardType(.numberPad) currently not working
+                        .keyboardType(.numbersAndPunctuation)
+                    
                     
                 }
                 
@@ -125,36 +155,36 @@ struct ContentView: View {
                 }
             }
             Spacer()
-
+            
             
             HStack{
-
+                
                 VStack{
                     Spacer()
                     Image(systemName: "wind")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(height: 80)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(height: 80)
                         .padding()
-                
+                    
                     Button(action: {
-                       self.showingInfoSheet.toggle()
+                        self.showingInfoSheet.toggle()
                     }) {
-                       Text("Infomationen")
+                        Text("Infomationen")
                         
                     }
                     .sheet(isPresented: $showingInfoSheet, content: {
                         ScrollView1()
                     })
-
-                Text("Luftkanalrechner v1.0.2")
-                    .padding()
-            }
+                    
+                    Text("Luftkanalrechner v1.0.2")
+                        .padding()
+                }
             }
         }
     }
     
-
+    
     
     func BerechungVGA(){
         var calculation : Double {
@@ -176,7 +206,7 @@ struct ContentView: View {
         KanalDErgebnis = String(formatted2)
         
     }
-    func BerechungVG(){
+    func BerechungVG1(){
         var calculation : Double {
             guard let V = Double(VolumenstromEingabe), let g = Double(GeschwindigkeitEingabe) else { return 0 }
             let product = V / g / 3600
@@ -186,14 +216,28 @@ struct ContentView: View {
         let formatted = String(format: "%.0f", calculation)
         KanalBEingabe = String(formatted)
         KanalAEingabe = String(formatted)
-        
+    }
+    
+    func BerechungVGD(){
         var calculation2 : Double {
             guard let V = Double(VolumenstromEingabe), let g = Double(GeschwindigkeitEingabe) else { return 0 }
             let product2 = (V / g / 3600) / 3.14159265
             let product3 = sqrt(product2) * 2000
             return product3
         }
-
+        
+        let formatted2 = String(format: "%.0f", calculation2)
+        KanalDErgebnis = String(formatted2)
+    }
+    
+    func BerechungVG2(){
+        var calculation2 : Double {
+            guard let V = Double(VolumenstromEingabe), let g = Double(GeschwindigkeitEingabe) else { return 0 }
+            let product2 = (V / g / 3600) / 3.14159265
+            let product3 = sqrt(product2) * 2000
+            return product3
+        }
+        
         let formatted2 = String(format: "%.0f", calculation2)
         KanalDErgebnis = String(formatted2)
     }
@@ -207,6 +251,7 @@ struct ContentView: View {
         let formatted = String(format: "%.2f", calculation)
         GeschwindigkeitEingabe = String(formatted)
     }
+    
     func BerechungDg(){
         var calculation : Double {
             guard let D = Double(KanalDErgebnis), let V = Double(VolumenstromEingabe) else { return 0 }
@@ -218,7 +263,15 @@ struct ContentView: View {
         let formatted = String(format: "%.2f", calculation)
         GeschwindigkeitEingabe = String(formatted)
     }
+    
+    func Validate(){
+        
+    }
+    
 }
+
+
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
