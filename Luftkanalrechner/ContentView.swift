@@ -153,7 +153,19 @@ struct ContentView: View {
                         .fontWeight(.bold)
                         .frame(height: 50)
                 }
+                
+                
+                
             }
+            Button(action:  {
+                self.ClearAll()
+            
+            
+            })   {
+                Text("Reset")}
+            
+            
+            
             Spacer()
             
             
@@ -177,7 +189,7 @@ struct ContentView: View {
                         ScrollView1()
                     })
                     
-                    Text("Luftkanalrechner v1.0, Build 5")
+                    Text("Luftkanalrechner v1.0, Build 6")
                         .padding()
                 }
             }
@@ -265,6 +277,18 @@ struct ContentView: View {
     }
     
     func Validate(){
+        
+    }
+    
+    func ClearAll(){
+        VolumenstromEingabe = String()
+        GeschwindigkeitEingabe = String()
+        KanalAEingabe = String()
+        KanalBEingabe = String()
+        KanalDEingabe = String()
+        KanalDErgebnis = String()
+        VolumenstromErgebnis = String()
+        GeschwindigkeitErgebnis = String()
         
     }
     
